@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:paddingVertical="20dp"
+            android:layout_gravity="center"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center"
+                    app:srcCompat="@drawable/ecg_photo"
+                    android:layout_marginBottom="24dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="24dp"
+                    android:text="On-device Classification of 12-Lead Electrocardiograms (ECGs) using Deep Neural Networks for Time Series Classification"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="24dp"
+                    android:text="ABSTRACT"
+                    android:textColor="#808080"
+                    android:textStyle="bold"
+                    android:textSize="14dp"
+                    android:layout_marginTop="20dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="24dp"
+                    android:text="Ranking highest among the leading causes of mortality both in the Philippines and worldwide are cardiovascular diseases (CVD). It is through a non-invasive diagnostic procedure called electrocardiography (ECG) can a patient's general cardiac condition be observed, which when paired with an early and accurate diagnosis could bring significant chances for successful treatment. However, ECG analysis is still heavily reliant on manual interpretation of experienced medical practitioners. Tackling this challenge and leveraging both advancements in deep learning techniques and on-device inference frameworks, a consumer-ready Android application was developed in this study capable of accepting raw ECG data as input and performing desired classification task giving an accurate ECG diagnosis pursuant to the SCP-ECG standard. Experiment results show retained performance of compressed models using TensorFlow Lite across different neural network architectures. Throughout four architectures analyzed for classification tasks, best models achieved AUC scores as high 93.7\% and H-loss as low as 0.02\%. Furthermore, validation of the project running on a Raspberry Pi Zero was conducted proving feasibility to run inference on a device with less compute resources. With both the smartphone application and RPi validation performing on-device inference, end-to-end ECG classification didn't require internet connectivity, reduced latency, and assured health data privacy. Code is available on Github. http://github.com/francismarquez/eee-198"
+                    android:textColor="#696969"
+                    android:textSize="11dp" />
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:gravity="center">
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="73dp"
+                    android:background="@drawable/rounded_corner"
+                    android:gravity="center"
+                    android:text="1"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+                <Button
+                    android:id="@+id/openCSV"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:onClick="onClickOpenCSV"
+                    android:text="LOAD CSV"
+                    android:layout_marginBottom="50dp"/>
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="73dp"
+                    android:background="@drawable/rounded_corner"
+                    android:gravity="center"
+                    android:text="2"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+                <Button
+                    android:id="@+id/analyze"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="20dp"
+                    android:backgroundTint="@color/dark_pastel_yellow"
+                    android:onClick="onClickAnalayzeBtn"
+                    android:text="Analyze" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

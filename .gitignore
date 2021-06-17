@@ -1,0 +1,13 @@
+settings.json
+
+.vscode/
+
+**/**.pyc
+
+data/
+models/
+preliminary_models/
+latex_paper/
+short_paper/
+
+# latex_paper/
